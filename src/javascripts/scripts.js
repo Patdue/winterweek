@@ -1,4 +1,9 @@
 /* eslint linebreak-style: ["error", "windows"] */
+
+// eslint-disable-next-line no-unused-vars,func-names
+// your page initialization code here
+// the DOM will be available here
+
 // Set the date we're counting down to
 const countDownDate = new Date('Nov 20, 2019 19:00:00').getTime();
 
@@ -29,3 +34,21 @@ const x = setInterval(() => {
     document.getElementById('registration-form').classList.toggle('hidden');
   }
 }, 1000);
+
+
+let slideIndex = 0;
+
+function carousel() {
+  let i;
+  const slides = document.getElementsByClassName('slide');
+  for (i = 0; i < slides.length; i += 1) {
+    slides[i].style.display = 'none';
+  }
+  slideIndex += 1;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  slides[slideIndex - 1].style.display = 'block';
+  // eslint-disable-next-line no-restricted-globals
+  setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+
+window.onload = carousel;
