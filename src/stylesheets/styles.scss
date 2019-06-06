@@ -17,7 +17,6 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
     height: 96vh;
     padding: 2vh;
   }
@@ -58,5 +57,9 @@ body {
         display: inherit;
       }
     }
+  }
+
+  #footer {
+    height: 10vh;
   }
 }
