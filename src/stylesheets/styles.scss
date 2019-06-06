@@ -1,4 +1,3 @@
-// Add your styles here
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
@@ -28,8 +27,7 @@ body {
     max-width: 100%;
   }
 
-  .scroll-down {
-    line-height: 75%;
+  .big-bold {
     font-size: 3vh;
     font-weight: 700;
     text-align: center;
@@ -37,5 +35,28 @@ body {
 
   .color-inverted {
     background: #1b85b4;
+    color: white;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #countdown-timer {
+    color: #d3daee;
+
+    span {
+      color: black;
+    }
+
+    br {
+      display: none;
+    }
+
+    @media screen and (orientation: portrait) {
+      br {
+        display: inherit;
+      }
+    }
   }
 }

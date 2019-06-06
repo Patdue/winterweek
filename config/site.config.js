@@ -1,3 +1,4 @@
+/* eslint-disable */
 const path = require('path');
 const fs = require('fs');
 
@@ -15,7 +16,7 @@ const config = {
   site_description: 'Website for information and registration for winterweek 2019',
 
   // Your website's URL, used for sitemap
-  site_url: 'www.winter.week.wtf',
+  site_url: 'https://winter.week.wtf',
 
   // Google Analytics tracking ID (leave blank to disable)
   googleAnalyticsUA: '',
