@@ -30,7 +30,7 @@ body {
     font-size: 4vmin;
     font-weight: 700;
     text-align: center;
-    line-height: 100%;
+    line-height: 1.2;
     font-family: 'Permanent Marker', sans-serif;
   }
 
@@ -80,5 +80,10 @@ body {
 
   #footer {
     height: 10vh;
+  }
+
+  .import-fix {
+    /* webpack will miss the main svg otherwise */
+    background: url('../images/winterweek20.svg');
   }
 }

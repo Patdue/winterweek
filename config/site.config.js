@@ -10,10 +10,10 @@ if (!ROOT) {
 
 const config = {
   // Your website's name, used for favicon meta tags
-  site_name: 'Winterweek 2019',
+  site_name: 'Winterweek 2020',
 
   // Your website's description, used for favicon meta tags
-  site_description: 'Website for information and registration for winterweek 2019',
+  site_description: 'Website for information and registration for winterweek 2020',
 
   // Your website's URL, used for sitemap
   site_url: 'https://winter.week.wtf',
