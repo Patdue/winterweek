@@ -55,7 +55,7 @@ function carousel() {
 
 window.onload = carousel;
 
-const activities = ['skiing', 'snowboarding', 'après ski', 'beer pong', 'ski lessons', 'ski tours', 'fondue'];
+const activities = ['skiing', 'snowboarding', 'après ski', 'beer pong', 'ski lessons', 'ski tours', 'fondue', 'Night-Skiing', 'Sledding'];
 
 // eslint-disable-next-line no-new
 new Typewriter('#activities', {
