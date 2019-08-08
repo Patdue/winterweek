@@ -40,7 +40,6 @@
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
-    "@fortawesome/fontawesome-free": "^5.9.0",
     "autoprefixer": "^9.4.3",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^1.0.0",
@@ -89,6 +88,7 @@
     "reset-css": "^4.0.1",
     "sanitize.css": "^8.0.0",
     "typewriter-effect": "^2.5.3",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.10",
+    "@fortawesome/fontawesome-free": "^5.10.1"
   }
 }
