@@ -33,7 +33,7 @@ body {
     height: 100vh;
     // for ios..
     //noinspection CssInvalidPropertyValue
-    height: -webkit-fill-available;
+    // height: -webkit-fill-available;
     padding: 2vh;
   }
 
@@ -41,7 +41,7 @@ body {
     height: auto;
     min-height: 96vh;
     //noinspection CssInvalidPropertyValue
-    min-height: -webkit-fill-available;
+    //min-height: -webkit-fill-available;
     padding: 2vh;
   }
 
@@ -116,7 +116,7 @@ body {
     background: url('../images/winterweek20.svg');
   }
 
-  .grid {
+  .small-grid {
     ul {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -161,5 +161,32 @@ body {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
       }
     }
+  }
+
+  .two-sides {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-gap: 0;
+    padding: 0;
+
+    div {
+      display: flex;
+      color: white;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+      flex-direction: column;
+    }
+  }
+
+  #accommodation {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://s-ec.bstatic.com/images/hotel/max1024x768/678/67844875.jpg");
+    background-size: cover;
+  }
+
+  #resort {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://disentis-sedrun.graubuenden.ch/sites/disentis_sedrun/files/styles/grf_global_l/public/menu_images/dorf-sedrun-winterlandschaften.jpg?itok=RG2aYvdK");
+    background-size: cover;
   }
 }
