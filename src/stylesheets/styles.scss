@@ -5,6 +5,12 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 @import url('https://fonts.googleapis.com/css?family=Karla|Permanent+Marker&display=swap');
 
+$primary: #1e88a6;
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   margin: 0;
@@ -24,7 +30,18 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    height: 96vh;
+    height: 100vh;
+    // for ios..
+    //noinspection CssInvalidPropertyValue
+    height: -webkit-fill-available;
+    padding: 2vh;
+  }
+
+  .min-100 {
+    height: auto;
+    min-height: 96vh;
+    //noinspection CssInvalidPropertyValue
+    min-height: -webkit-fill-available;
     padding: 2vh;
   }
 
@@ -97,5 +114,52 @@ body {
   .import-fix {
     /* webpack will miss the main svg otherwise */
     background: url('../images/winterweek20.svg');
+  }
+
+  .grid {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 1rem;
+      color: black;
+      width: auto;
+      margin: 0 auto;
+      list-style-type: none;
+      padding: 0;
+      vertical-align: middle;
+
+      @media screen and (min-width: 1020px) {
+        max-width: 1000px;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      li {
+        padding: 2rem;
+        background: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        i.fas {
+          display: inline-block;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          line-height: 2rem;
+          vertical-align: middle;
+          color: white;
+          background: $primary;
+          padding: 1rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      li:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      }
+    }
   }
 }

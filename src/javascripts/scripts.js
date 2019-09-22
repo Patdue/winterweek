@@ -1,7 +1,7 @@
 /* eslint linebreak-style: ["error", "windows"] */
 
 
-import Typewriter from 'typewriter-effect/dist/core';
+// Simport Typewriter from 'typewriter-effect/dist/core';
 // eslint-disable-next-line no-unused-vars,func-names
 // your page initialization code here
 // the DOM will be available here
@@ -55,12 +55,13 @@ function carousel() {
 
 window.onload = carousel;
 
-const activities = ['skiing', 'snowboarding', 'après ski', 'beer pong', 'ski lessons', 'ski tours', 'fondue', 'Night-Skiing', 'Sledding'];
-
-// eslint-disable-next-line no-new
-new Typewriter('#activities', {
-  strings: activities,
-  autoStart: true,
-  loop: true,
-  cursor: '',
-});
+// const activities = ['skiing', 'snowboarding', 'après ski', 'beer pong', 'ski lessons',
+// 'ski tours', 'fondue', 'Night-Skiing', 'Sledding'];
+//
+// // eslint-disable-next-line no-new
+// new Typewriter('#activities', {
+//   strings: activities,
+//   autoStart: true,
+//   loop: true,
+//   cursor: '',
+// });
