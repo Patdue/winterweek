@@ -19,7 +19,7 @@ const config = {
   site_url: 'https://winter.week.wtf',
 
   // Google Analytics tracking ID (leave blank to disable)
-  googleAnalyticsUA: '',
+  googleAnalyticsUA: 'UA-118131939-2',
 
   // The viewport meta tag added to your HTML page's <head> tag
   viewport: 'width=device-width,initial-scale=1',
