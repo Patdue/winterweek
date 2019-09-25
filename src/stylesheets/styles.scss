@@ -10,6 +10,9 @@ $icu-green: #21b24b;
 $faps-red: #7537bf;
 $orange: #ffa424;
 
+$red: #ff4136;
+$green: #2ecc40;
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,6 +21,7 @@ body {
   width: 100%;
   margin: 0;
   font-family: 'Karla', sans-serif;
+  scroll-snap-type: y proximity;
 }
 
 .body-container {
@@ -41,6 +45,7 @@ body {
   }
 
   .page {
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -111,21 +116,6 @@ body {
     }
   }
 
-  #impressions {
-    padding: 0;
-
-    .slide {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: none;
-    }
-  }
-
-  #footer {
-    height: 10vh;
-  }
-
   .import-fix {
     /* webpack will miss the main svg otherwise */
     background: url('../images/winterweek20.svg');
@@ -168,7 +158,7 @@ body {
       }
 
       i.fa-check {
-        color: greenyellow;
+        color: $green;
       }
     }
   }
@@ -206,7 +196,7 @@ body {
       }
 
       i.fa-times {
-        color: red;
+        color: $red;
       }
     }
   }
@@ -230,11 +220,11 @@ body {
         list-style: none;
 
         i.fa-times {
-          color: red;
+          color: $red;
         }
 
         i.fa-check {
-          color: greenyellow;
+          color: $green;
         }
       }
     }
@@ -257,6 +247,17 @@ body {
     }
   }
 
+  #impressions {
+    padding: 0;
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+  }
+
   #accommodation {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://s-ec.bstatic.com/images/hotel/max1024x768/678/67844875.jpg");
     background-size: cover;
@@ -265,5 +266,10 @@ body {
   #resort {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://disentis-sedrun.graubuenden.ch/sites/disentis_sedrun/files/styles/grf_global_l/public/menu_images/dorf-sedrun-winterlandschaften.jpg?itok=RG2aYvdK");
     background-size: cover;
+  }
+
+  .short {
+    border-top: $primary 3px solid;
+    height: 10vh;
   }
 }
