@@ -218,6 +218,7 @@ body {
       li {
         text-align: left;
         list-style: none;
+        margin-left: 1rem;
 
         i.fa-times {
           color: $red;
@@ -230,9 +231,20 @@ body {
     }
   }
 
+  #impressions {
+    padding: 0;
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+  }
+
   .two-sides {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 0;
     padding: 0;
 
@@ -244,17 +256,6 @@ body {
       align-items: center;
       justify-items: center;
       flex-direction: column;
-    }
-  }
-
-  #impressions {
-    padding: 0;
-
-    .slide {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: none;
     }
   }
 
