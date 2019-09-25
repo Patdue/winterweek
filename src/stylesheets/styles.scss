@@ -6,6 +6,9 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import url('https://fonts.googleapis.com/css?family=Karla|Permanent+Marker&display=swap');
 
 $primary: #1e88a6;
+$icu-green: #21b24b;
+$faps-red: #7537bf;
+$orange: #ffa424;
 
 html {
   scroll-behavior: smooth;
@@ -23,6 +26,18 @@ body {
   a {
     color: inherit;
     text-decoration: inherit;
+  }
+
+  .icu-green {
+    background: $icu-green;
+  }
+
+  .faps-red {
+    background: $faps-red;
+  }
+
+  .non-student-orange {
+    background: $orange;
   }
 
   .page {
@@ -56,7 +71,7 @@ body {
   }
 
   .big-bold {
-    font-size: 4vmin;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
     line-height: 1.2;
@@ -117,52 +132,110 @@ body {
   }
 
   .small-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    color: black;
+    width: auto;
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+    vertical-align: middle;
+
+    @media screen and (min-width: 1020px) {
+      max-width: 1000px;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    .item {
+      padding: 2rem;
+
+      i.main-icon {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        line-height: 2rem;
+        vertical-align: middle;
+        color: white;
+        background: $primary;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      i.fa-check {
+        color: greenyellow;
+      }
+    }
+  }
+
+  .card,
+  .inactive-card {
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+
+  .prices {
+    .price {
+      text-align: center;
+
+      .price-header {
+        color: white;
+        margin: 0;
+        padding: 1rem;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 0 1rem;
+        padding: 1rem;
+      }
+
+      h1 + h1 {
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        padding-bottom: 0;
+      }
+
+      i.fa-times {
+        color: red;
+      }
+    }
+  }
+
+  .included-list {
+    text-align: center;
+
     ul {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      grid-gap: 1rem;
-      color: black;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 2rem;
       width: auto;
       margin: 0 auto;
-      list-style-type: none;
-      padding: 0;
-      vertical-align: middle;
 
       @media screen and (min-width: 1020px) {
         max-width: 1000px;
       }
 
-      h1,
-      h2 {
-        text-align: center;
-      }
+      li {
+        text-align: left;
+        list-style: none;
 
-      .item {
-        padding: 2rem;
-        background: white;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
-        i.main-icon {
-          display: inline-block;
-          width: 2rem;
-          height: 2rem;
-          border-radius: 50%;
-          line-height: 2rem;
-          vertical-align: middle;
-          color: white;
-          background: $primary;
-          padding: 1rem;
-          margin-bottom: 1.5rem;
+        i.fa-times {
+          color: red;
         }
 
         i.fa-check {
           color: greenyellow;
         }
-      }
-
-      .item:hover {
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
       }
     }
   }

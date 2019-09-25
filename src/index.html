@@ -20,9 +20,9 @@
     </div>
   </div>
 
-  <div id="info" class="page min-100 color-inverted small-grid">
-      <ul>
-        <li class="item">
+  <div id="info" class="page min-100 color-inverted">
+      <ul class="small-grid">
+        <li class="item card">
           <a href="#included">
           <h2>
             <i class="fas fa-dollar-sign main-icon"></i>
@@ -41,7 +41,7 @@
           </p>
           </a>
         </li>
-        <li class="item">
+        <li class="item card">
           <a href="#registration">
             <h2>
               <i class="fas fa-edit main-icon"></i>
@@ -49,11 +49,11 @@
               Registration
             </h2>
             <p>
-              Registration to get one of the limited spots in this years winterweek starts on 20.11.2019! <b>First come first serve</b>.
+              Register now to get one of the limited spots in this years winterweek! <b>First come first serve</b>.
             </p>
           </a>
         </li>
-        <li class="item">
+        <li class="item card">
           <a href="#accommodation">
             <h2>
               <i class="fas fa-igloo main-icon"></i>
@@ -65,7 +65,7 @@
             </p>
           </a>
         </li>
-        <li class="item">
+        <li class="item card">
           <a href="#activities">
           <h2>
             <i class="fas fa-skiing main-icon"></i>
@@ -77,7 +77,7 @@
           </p>
           </a>
         </li>
-        <li class="item">
+        <li class="item card">
           <a href="#impressions">
           <h2>
             <i class="fas fa-images main-icon"></i>
@@ -89,7 +89,7 @@
           </p>
           </a>
         </li>
-        <li class="item">
+        <li class="item card">
           <a href="#resort">
           <h2>
             <i class="fas fa-mountain main-icon"></i>
@@ -104,8 +104,50 @@
       </ul>
   </div>
 
-  <div id="included" class="page">
+  <div id="included" class="page min-100">
+    <h1 class="big-bold">Prices</h1>
+    <div class="prices small-grid">
+      <div class="price inactive-card">
+        <h2 class="price-header icu-green">ICU Members</h2>
+        <h1>CHF 500.-</h1>
+        <h1>CHF 300.-</h1>
+        <p><i class="fas fa-times"></i> Without ski pass</p>
+      </div>
+      <div class="price inactive-card">
+        <h2 class="price-header faps-red">Students</h2>
+        <h1>CHF 650.-</h1>
+        <h1>CHF 450.-</h1>
+        <p><i class="fas fa-times"></i> Without ski pass</p>
+      </div>
+      <div class="price inactive-card">
+        <h2 class="price-header non-student-orange">Non-Students</h2>
+        <h1>CHF 750.-</h1>
+        <h1>CHF 450.-</h1>
+        <p><i class="fas fa-times"></i> Without ski pass</p>
+      </div>
+    </div>
 
+    <h1 class="big-bold">What's Included</h1>
+    <div class="included-list">
+      <ul class="fa-ul">
+        <li><span class="fa-li"><i class="fas fa-check"></i></span>5-day <b>ski pass</b> (Mo-Fr) for the whole Skiarena Andermatt, Sedrun & Disentis</li>
+        <li><span class="fa-li"><i class="fas fa-check"></i></span>6 nights <b>accommodation</b> including bed-sheets</li>
+        <li><span class="fa-li"><i class="fas fa-check"></i></span><b>Delicious food</b> all week: Breakfast, lunch to pack (Sandwiches etc.), dinner, late-night snacks</li>
+        <li><span class="fa-li"><i class="fas fa-check"></i></span><b>Public transport</b> from Zurich to Sedrun and back</li>
+        <li><span class="fa-li"><i class="fas fa-check"></i></span>Welcome Glühwein</li>
+        <li><span class="fa-li"><i class="fas fa-check"></i></span>Free <b>ski/snowboard lessons</b></li>
+        <li><span class="fa-li"><i class="fas fa-check"></i></span><b>Fondue</b> at a fancy restaurant</li>
+        <li><span class="fa-li"><i class="fas fa-check"></i></span>Lots of <b>events</b> on and off the slopes </li>
+      </ul>
+
+      <h3>Things we offer that are not included</h3>
+      <ul class="fa-ul">
+        <li><span class="fa-li"><i class="fas fa-times"></i></span>Alcoholic beverages, après ski & club entrance fees</li>
+        <li><span class="fa-li"><i class="fas fa-times"></i></span>Night skiing (CHF10)</li>
+        <li><span class="fa-li"><i class="fas fa-times"></i></span>Guided ski-tours (~CHF80)</li>
+        <li><span class="fa-li"><i class="fas fa-times"></i></span>Wellness (~CHF30)</li>
+      </ul>
+    </div>
   </div>
 
   <div id="activities" class="page color-inverted">
@@ -115,15 +157,17 @@
   <div class="page two-sides">
     <div id="accommodation">
       <a href="http://www.spinatscha.ch/neu/de/">
-      <h2>Accommodation</h2>
-      <h1 class="big-bold">Nova Casa Spinatscha</h1>
+        <h2>Accommodation</h2>
+        <h1 class="big-bold">Nova Casa Spinatscha</h1>
+        <h1><i class="fas fa-arrow-circle-right"></i></h1>
       </a>
     </div>
 
     <div id="resort">
       <a href="https://skiarena.ch">
-      <h2>Ski Resort</h2>
-      <h1 class="big-bold">Skiarena Andermatt Sedrun Disentis</h1>
+        <h2>Ski Resort</h2>
+        <h1 class="big-bold">Skiarena Andermatt Sedrun Disentis</h1>
+        <h1><i class="fas fa-arrow-circle-right"></i></h1>
       </a>
     </div>
   </div>
@@ -138,7 +182,7 @@
 
   <div id="footer" class="page color-inverted">
     <a href="https://www.icu.uzh.ch" target="_blank" class="max-100">
-    <img class="max-100" src="images/iculogo.svg">
+    <img alt="icu logo" class="max-100" src="images/iculogo.svg">
     </a>
   </div>
 
