@@ -209,7 +209,7 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       grid-gap: 2rem;
       width: auto;
-      margin: 0 auto;
+      margin: 1rem auto;
 
       @media screen and (min-width: 1020px) {
         max-width: 1000px;
@@ -231,17 +231,6 @@ body {
     }
   }
 
-  #impressions {
-    padding: 0;
-
-    .slide {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: none;
-    }
-  }
-
   .two-sides {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -256,6 +245,18 @@ body {
       align-items: center;
       justify-items: center;
       flex-direction: column;
+    }
+  }
+
+  #impressions {
+    padding: 0;
+    height: auto;
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
     }
   }
 
