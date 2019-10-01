@@ -21,16 +21,35 @@ body {
   width: 100%;
   margin: 0;
   font-family: 'Karla', sans-serif;
-  scroll-snap-type: y proximity;
+  //scroll-snap-type: y proximity;
+}
+
+.language-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background: $primary;
+  color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.language-switch:hover {
+  opacity: 1;
 }
 
 .body-container {
   width: 100%;
-
-  a {
-    color: inherit;
-    text-decoration: inherit;
-  }
 
   .icu-green {
     background: $icu-green;
@@ -45,7 +64,7 @@ body {
   }
 
   .page {
-    scroll-snap-align: start;
+    //scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -227,6 +246,10 @@ body {
         i.fa-check {
           color: $green;
         }
+
+        i.fa-dot-circle {
+          color: $orange;
+        }
       }
     }
   }
@@ -253,10 +276,11 @@ body {
     height: auto;
 
     .slide {
-      width: 100%;
-      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: cover;
       display: none;
+      overflow: hidden;
     }
   }
 
@@ -271,7 +295,12 @@ body {
   }
 
   .short {
+    h1 {
+      margin: 0;
+    }
+
     border-top: $primary 3px solid;
-    height: 10vh;
+    min-height: 3rem;
+    max-height: 5rem;
   }
 }
