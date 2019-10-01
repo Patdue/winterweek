@@ -31,21 +31,20 @@ body {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  width: 3rem;
-  height: 3rem;
-  background: $primary;
+  width: 2rem;
+  height: 2rem;
+  color: $primary;
+  border: $primary 1px solid;
+}
+
+.language-switch:hover {
   color: white;
-  border-radius: 50%;
-  opacity: 0.5;
+  background: $primary;
 }
 
 a {
   color: inherit;
   text-decoration: inherit;
-}
-
-.language-switch:hover {
-  opacity: 1;
 }
 
 .body-container {
