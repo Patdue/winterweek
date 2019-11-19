@@ -65,3 +65,51 @@ window.onload = carousel;
 //   loop: true,
 //   cursor: '',
 // });
+
+let showVideo = true;
+
+const slotsContainer = document.getElementsByClassName('slots-container')[0];
+const videoContainer = document.getElementsByClassName('video-container')[0];
+const videoNormalDisplay = slotsContainer.style.display;
+const slotsNormalDisplay = slotsContainer.style.display;
+const video = videoContainer.children[0];
+const slots = document.getElementById('slots-left');
+
+function switchSlotsVideo() {
+  let fetchSpotsTimeout;
+  function fetchSpots() {
+    const request = new XMLHttpRequest();
+    request.open('GET', 'https://v2-api.sheety.co/a6f47424b2967761bdac347953ab953d/winterWeek/stats', true);
+    // eslint-disable-next-line func-names
+    request.onload = function () {
+      // Begin accessing JSON data here
+      const data = JSON.parse(this.response);
+      // eslint-disable-next-line no-alert
+      if (request.status >= 200 && request.status < 400) {
+        slots.innerText = data.stats[0].spotsLeft;
+      }
+    };
+    request.send();
+    fetchSpotsTimeout = setTimeout(fetchSpots, 5000);
+  }
+
+  clearTimeout(fetchSpotsTimeout);
+  let timeout;
+  if (showVideo === true) {
+    slotsContainer.style.display = 'none';
+    videoContainer.style.display = videoNormalDisplay;
+    video.currentTime = 0;
+    video.play();
+    timeout = 60000;
+  } else {
+    videoContainer.style.display = 'none';
+    slotsContainer.style.display = slotsNormalDisplay;
+    video.pause();
+    fetchSpots();
+    timeout = 600000;
+  }
+  showVideo = !showVideo;
+  setTimeout(switchSlotsVideo, timeout);
+}
+
+window.onload = switchSlotsVideo;

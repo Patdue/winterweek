@@ -93,6 +93,10 @@ a {
     flex-grow: 1;
   }
 
+  .max-full {
+    max-height: 100vh;
+  }
+
   .big-bold {
     font-size: 2rem;
     font-weight: 700;
@@ -280,6 +284,13 @@ a {
       object-fit: cover;
       display: none;
       overflow: hidden;
+    }
+
+    .video-container {
+      video {
+        max-height: 100%;
+        max-width: 100%;
+      }
     }
   }
 
