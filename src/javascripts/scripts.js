@@ -92,6 +92,7 @@ function switchSlotsVideo() {
     request.send();
     fetchSpotsTimeout = setTimeout(fetchSpots, 5000);
   }
+  fetchSpots();
 
   clearTimeout(fetchSpotsTimeout);
   let timeout;
